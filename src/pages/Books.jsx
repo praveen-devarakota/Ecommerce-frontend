@@ -11,11 +11,10 @@ function Books() {
 
   const navigate = useNavigate();
   const { addToCart } = useCart();
-
   const productHandler = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:5001/api/products');
+      const response = await axios.get('https://ecommerce-backend-yj8d.onrender.com/api/products');
       let productsData = response.data;
 
       if (productsData && typeof productsData === 'object' && !Array.isArray(productsData)) {
@@ -40,7 +39,7 @@ function Books() {
           image: product.image
             ? product.image.startsWith('http')
               ? product.image
-              : `http://localhost:5001${product.image.startsWith('/') ? '' : '/'}${product.image}`
+              : `https://ecommerce-backend-yj8d.onrender.com${product.image.startsWith('/') ? '' : '/'}${product.image}`
             : null,
         }));
 

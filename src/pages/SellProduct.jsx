@@ -66,7 +66,7 @@ function SellProduct() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5001/api/products", {
+      const response = await axios.post("https://ecommerce-backend-yj8d.onrender.com/api/products", {
         name,
         price: Number(price),
         image,

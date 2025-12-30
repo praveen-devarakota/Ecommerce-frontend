@@ -9,7 +9,7 @@ export default function HomePage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/api/products")
+      .get("https://ecommerce-backend-yj8d.onrender.com/api/products")
       .then((response) => {
         console.log("API response data:", response.data);
 

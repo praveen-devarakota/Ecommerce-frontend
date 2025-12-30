@@ -35,7 +35,7 @@ function Loginpage() {
     const password = e.target.newPassword.value.trim();
 
     try {
-      const res = await axios.post('http://localhost:5001/api/users/signup', {
+      const res = await axios.post('https://ecommerce-backend-yj8d.onrender.com/api/users/signup', {
         username,
         email,
         password,
